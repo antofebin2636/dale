@@ -6297,7 +6297,7 @@ body {
   min-height: 100vh;
   color: #2f2f2f;
   font-weight: 400;
-  font-family: "Syntax LT Std ", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.4;
   background-color: #ffffff;
 }
@@ -6348,12 +6348,12 @@ select > option {
 
 ::selection {
   color: #ffffff;
-  background: #4dbfb2;
+  background: #53857f;
 }
 
 ::-moz-selection {
   color: #ffffff;
-  background: #4dbfb2;
+  background: #53857f;
 }
 
 .Disabled {
@@ -6426,4 +6426,196 @@ main {
   .vr__title {
     display: block;
   }
+}
+
+.Outer {
+  display: block;
+  width: 94%;
+  max-width: 80em;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.HeaderBanner .HeaderBanner__inner {
+  display: grid;
+}
+@media (min-width: 768px) {
+  .HeaderBanner .HeaderBanner__inner {
+    grid-template-columns: 0% 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .HeaderBanner .HeaderBanner__inner {
+    grid-template-columns: 10% 90%;
+  }
+}
+
+.HeaderBrand {
+  display: flex;
+}
+.HeaderBrand .Logo {
+  background-color: #53857f;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+@media (min-width: 768px) {
+  .HeaderBrand .Logo {
+    width: auto;
+  }
+}
+.HeaderBrand .HeaderNavigation {
+  display: none;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .HeaderBrand .HeaderNavigation {
+    display: block;
+  }
+}
+.HeaderBrand .HeaderNavigation__sub,
+.HeaderBrand .HeaderNavigation__main {
+  display: flex;
+  justify-content: space-around;
+}
+@media (min-width: 768px) {
+  .HeaderBrand .HeaderNavigation__sub,
+.HeaderBrand .HeaderNavigation__main {
+    padding: 1rem 0px;
+  }
+}
+.HeaderBrand .HeaderNavigation__main {
+  background-color: #aacac7;
+}
+@media (min-width: 768px) {
+  .HeaderBrand .HeaderNavigation__main {
+    padding: 1.5rem 0px;
+  }
+}
+@media (min-width: 768px) {
+  .HeaderBrand .HeaderNavigation__main .HeaderNavigationList > * + * {
+    padding-left: 4rem;
+  }
+}
+.HeaderBrand .HeaderNavigation__main .HeaderNavigationList a {
+  text-transform: capitalize;
+}
+@media (min-width: 768px) {
+  .HeaderBrand .HeaderNavigation__main .HeaderNavigationList a {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+.HeaderBrand .HeaderNavigationList {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .HeaderBrand .HeaderNavigationList > * + * {
+    padding-left: 2rem;
+  }
+}
+.HeaderBrand .HeaderNavigationList a {
+  text-transform: capitalize;
+  color: #1a1a1a;
+}
+@media (min-width: 768px) {
+  .HeaderBrand .HeaderNavigationList a {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.HeaderBrand .HeaderNavigationList a:after {
+  content: "";
+  border-bottom: 1px solid;
+  width: 100%;
+  display: block;
+  transform: scaleX(0);
+  transition: all 0.5s;
+  transform-origin: left;
+}
+.HeaderBrand .HeaderNavigationList a:hover:after {
+  transform: scale(1);
+}
+
+.HeroBanner {
+  position: relative;
+  min-height: calc(100vh - 106px);
+}
+@media (min-width: 768px) {
+  .HeroBanner {
+    min-height: 50vh;
+  }
+}
+.HeroBanner .HeroBanner__inner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.HeroBanner .HeroBanner__inner .Title {
+  font-weight: 500;
+  width: 100%;
+  margin: 0px auto;
+  font-size: 30px;
+  line-height: 36px;
+}
+@media (min-width: 768px) {
+  .HeroBanner .HeroBanner__inner .Title {
+    width: 75%;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+.HeroBanner .HeroBanner__inner .HeroBanner__container {
+  width: 94%;
+  max-width: 80em;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  height: 100%;
+}
+.HeroBanner .HeroBanner__desc {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.HeroBanner .HeroBanner__desc .HeroBanner__descIcon {
+  background-color: #397266;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.3rem 0 0.3rem 0.4rem;
+  cursor: pointer;
+}
+.HeroBanner .HeroBanner__desc .HeroBanner__descIcon img {
+  transition: transform 0.2s;
+}
+.HeroBanner .HeroBanner__desc .HeroBanner__descIcon.Down img {
+  transform: rotate(180deg);
+}
+.HeroBanner .HeroBanner__desc .HeroBanner__descContent {
+  background-color: #003D2A;
+  text-align: center;
+  padding: 1.2rem 4rem;
+  font-size: 14px;
+  line-height: 14px;
+  transition: all 0.5s;
+}
+.HeroBanner .HeroBanner__desc .HeroBanner__descContent.Disable {
+  height: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }

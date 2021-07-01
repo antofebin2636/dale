@@ -18,7 +18,7 @@ This is used to wrap the site, and shouldn't be confused with the site header.
     <!-- Google Fonts - async loading hack -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"  rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"  rel="stylesheet">
 
     <meta name="msapplication-TileColor" content="#1F325F">
     <meta name="theme-color" content="#1F325F">

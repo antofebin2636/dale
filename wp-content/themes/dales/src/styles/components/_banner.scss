@@ -1,0 +1,79 @@
+.HeroBanner{
+  position: relative;
+  min-height: calc(100vh - 106px);
+  @include bp(sm){
+    min-height: 50vh;
+  }
+  .HeroBanner__inner{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    .Title{
+      font-weight: $font-medium;
+      width: 100%;
+      margin: 0px auto;
+      @include Font__30-36;
+      @include bp(sm){
+        width: 75%;
+        @include Font__50-60;
+      }
+    }
+    .HeroBanner__container{
+      width: 94%;
+      max-width: 80em;
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-white;
+      text-align: center;
+      height: 100%;
+    }
+  }
+
+
+  .HeroBanner__desc{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .HeroBanner__descIcon{
+      background-color: $color-lightGreen;
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 0.3rem 0 0.3rem 0.4rem;
+      cursor: pointer;
+      img{
+        transition: transform 0.2s;
+      }
+      &.Down{
+        img{
+          transform: rotate(180deg);
+        }
+
+      }
+    }
+    .HeroBanner__descContent{
+      background-color: $color-darkGreen;
+      text-align: center;
+      padding: 1.2rem 4rem;
+      @include Font__14-14;
+      transition: all 0.5s;
+      &.Disable{
+        height: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+
+      }
+    }
+  }
+}

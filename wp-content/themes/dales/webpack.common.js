@@ -1,9 +1,9 @@
 const webpack = require("webpack");
-// const dotenv = require("dotenv").config();
+const dotenv = require("dotenv").config();
 
-// if (dotenv.error) {
-//     throw "Please set up '.env' file first. Rename and modify '.env.example' to get started.";
-// }
+if (dotenv.error) {
+    throw "Please set up '.env' file first. Rename and modify '.env.example' to get started.";
+}
 
 const core = {
     entry: "./src/scripts/theme.js",
@@ -38,9 +38,9 @@ const core = {
         }, ],
     },
     plugins: [
-        // new webpack.DefinePlugin({
-        //     "process.env": dotenv.parsed,
-        // }),
+        new webpack.DefinePlugin({
+            "process.env": dotenv.parsed,
+        }),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery",

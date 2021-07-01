@@ -1,0 +1,88 @@
+.HeaderBanner {
+    .HeaderBanner__inner {
+        display: grid;
+        @include bp(sm) {
+            grid-template-columns: 0% 100%;
+        }
+        @include bp(lg) {
+            grid-template-columns: 10% 90%;
+        }
+    }
+}
+
+.HeaderBrand {
+    display: flex;
+    .Logo {
+        background-color: $color-primary;
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        width: 30%;
+        @include bp(sm){
+            width: auto;
+        }
+    }
+    .HeaderNavigation {
+        display: none;
+        @include bp(sm){
+            display: block;
+        }
+        flex: 1;
+    }
+    .HeaderNavigation__sub,
+    .HeaderNavigation__main {
+        display: flex;
+        justify-content: space-around;
+        @include bp(sm) {
+            padding: 1rem 0px;
+        }
+    }
+    .HeaderNavigation__main {
+        background-color: $color-nav;
+        @include bp(sm) {
+            padding: 1.5rem 0px;
+        }
+        .HeaderNavigationList {
+            @include bp(sm) {
+                >*+* {
+                    padding-left: 4rem;
+                }
+            }
+            a {
+                text-transform: capitalize;
+                @include bp(sm) {
+                    @include Font__18-20;
+                }
+            }
+        }
+    }
+    .HeaderNavigationList {
+        display: flex;
+        @include bp(sm) {
+            >*+* {
+                padding-left: 2rem;
+            }
+        }
+        a {
+            text-transform: capitalize;
+            color: $color-navItem;
+            @include bp(sm) {
+                @include Font__16-20;
+            }
+            &:after {
+                content: "";
+                border-bottom: 1px solid;
+                width: 100%;
+                display: block;
+                transform: scaleX(0);
+                transition: all 0.5s;
+                transform-origin: left;
+            }
+            &:hover {
+                &:after {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
