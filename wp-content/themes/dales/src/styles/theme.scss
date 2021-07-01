@@ -1,0 +1,20 @@
+@charset 'utf-8';
+
+/* ----------------------------------------------------------------------
+| Variables
+|--------------------------------------------------------------------- */
+
+@import "./variables";
+
+/* ----------------------------------------------------------------------
+| Core Styles
+|--------------------------------------------------------------------- */
+
+@import "./fontawesome/scss/fontawesome.scss";
+@import "./fontawesome/scss/solid.scss";
+@import "./fontawesome/scss/brands.scss";
+@import "./core/reset";
+@import "./core/base";
+@import "./helpers/breakpoints";
+@import "./helpers/fonts";
+@import "./helpers/body";
