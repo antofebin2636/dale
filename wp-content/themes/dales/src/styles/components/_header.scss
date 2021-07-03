@@ -24,7 +24,7 @@
     }
     .HeaderNavigation {
         display: none;
-        @include bp(sm){
+        @include bp(lg){
             display: block;
         }
         flex: 1;

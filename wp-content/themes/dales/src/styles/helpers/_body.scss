@@ -70,7 +70,26 @@ main {
     display: block;
     width: 94%;
     max-width: 80em;
-    text-align: center;
     margin: 0 auto;
     position: relative;
+}
+
+.Section__header{
+    margin-bottom: 2rem;
+    text-align: center;
+    @include bp(sm){
+        margin-bottom: 3rem;
+    }
+}
+
+.Section{
+    position: relative;
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background-color: $color-white;
+    @include bp(sm){
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
 }

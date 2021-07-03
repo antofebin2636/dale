@@ -32,6 +32,12 @@
             @content;
         }
     }
+
+    @else if $size=="sm-media" {
+        @media screen and (min-width: $breakpoint-sm) {
+            @content;
+        }
+    }
     @else if $size=="xs" {
         @media (min-width: $breakpoint-xs) {
             @content;

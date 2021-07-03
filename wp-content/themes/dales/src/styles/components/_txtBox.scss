@@ -1,0 +1,99 @@
+.TxtBox{
+  .Section__content{
+    text-align: center;
+    margin: 0px auto;
+    @include bp(sm){
+      max-width: 43vh;
+      @include Font__18-28;
+    }
+  }
+}
+
+.TxtBox__items{
+  color: $color-white;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-column: span 5;
+  min-height: 18rem;
+  @include bp(sm){
+    grid-column: span 6;
+    min-height: 19rem;
+  }
+  @include bp(lg){
+    min-height: 22rem;
+  }
+  .TxtBox__img{
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+  }
+  .TxBox__content{
+    position: relative;
+    .Sub__title{
+      text-transform: uppercase;
+      display: block;
+      padding-bottom: 0.5rem;
+      font-size: 17px;
+      line-height: 20px;
+    }
+    .Title{
+      display: block;
+      font-size: 32px;
+      line-height: 38px;
+      padding-bottom: 1.4rem;
+      @include bp(lg){
+        padding-bottom: 1.8rem;
+        font-size: 35px;
+        line-height: 42px;
+      }
+    }
+
+    .TxtBox__cta{
+      background-color: $color-action;
+      color: $color-black;
+      text-transform: uppercase;
+      font-weight: $font-normal;
+      padding: 0.6rem 1.8rem;
+      transition: background-color 0.2s;
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-size: 15px;
+      line-height: 19px;
+      @include bp(sm){
+        padding: 0.9rem 1.5rem;
+      }
+      &:after{
+        position: absolute;
+        top: -2px;
+        left: -23%;
+        z-index: -1;
+        width: calc(123% + 1rem);
+        height: calc(100% + 4px);
+        background-color: $color-action-secondary;
+        transform: skewX(-30deg) scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s;
+        content: "";
+      }
+      &:hover{
+        &:after{
+          transform: skewX(-30deg) scaleX(1);
+          }
+        text-decoration: none;
+      }
+      &.cta--secondary{
+        background-color: $color-action-secondary;
+        &:after{
+          background-color: $color-action;
+        }
+      }
+    }
+  }
+}

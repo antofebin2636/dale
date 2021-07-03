@@ -1,6 +1,6 @@
 .HeroBanner{
   position: relative;
-  min-height: calc(100vh - 106px);
+ min-height: calc(100vh - 106px);
   @include bp(sm){
     min-height: 50vh;
   }
