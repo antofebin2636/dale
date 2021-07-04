@@ -1,5 +1,11 @@
 import "../styles/theme.scss";
 
+
+const appearTitles = require('./modules/animate').default;
+
+
+appearTitles();
+
 /* ----------------------------------------------------------------------
 | 📦 Modules - dynamically imported modules
 |--------------------------------------------------------------------- */

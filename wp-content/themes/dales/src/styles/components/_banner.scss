@@ -1,6 +1,7 @@
 .HeroBanner{
   position: relative;
  min-height: calc(100vh - 106px);
+  overflow: hidden;
   @include bp(sm){
     min-height: 50vh;
   }
@@ -18,7 +19,11 @@
       margin: 0px auto;
       @include Font__30-36;
       @include bp(sm){
+        font-size: 46px;
+        line-height: 50px;
         width: 75%;
+      }
+      @include bp(lg){
         @include Font__50-60;
       }
     }

@@ -34,7 +34,7 @@ main {
     grid-template-columns: repeat(4, 1fr);
     position: relative;
     @include bp(sm){
-        grid-column-gap: 2em;
+        grid-gap: 2em;
         grid-template-columns: repeat(12, 1fr);
     }
 }
@@ -93,3 +93,28 @@ main {
         margin-bottom: 4rem;
     }
 }
+
+
+.UnderScore{
+    &:after{
+        position: absolute;
+        bottom: -0.1rem;
+        left: 0;
+        width: 100%;
+        border-bottom: 2px solid $color-action;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+        content: "";
+    }
+    &:hover, &:focus{
+        &:after{
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        &:before{
+            opacity: 1;
+        }
+    }
+}
+

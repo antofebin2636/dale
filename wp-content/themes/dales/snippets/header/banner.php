@@ -6,7 +6,6 @@
                 <a href="" class="Logo">
                     <img width="100" height="100" class="Svg"  src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="<?= get_bloginfo( 'name' ) ?>"
                     ></a>
-            </>
             <div class="HeaderNavigation">
                 <div class="HeaderNavigation__sub">
                     <ul class="HeaderNavigationList">
@@ -29,6 +28,40 @@
                     </ul>
                 </div>
             </div>
+            <div class="HeaderMobTitle">
+                <span class="Title">Yorkshire Dales<br>National Park</span>
+            </div>
+            <div class="HeaderMobileMenu" data-module="header">
+                <div class="menu__item--doner" tabindex="2">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
         </div>
+    </div>
+</div>
+
+<div class="Mob__menu">
+    <span class="Close">X</span>
+    <div class="Mob--menuOne">
+        <ul class="HeaderNavigationList">
+            <li><a href="">About</a></li>
+            <li><a href="">How You can help</a></li>
+            <li><a href="">Park Authority</a></li>
+            <li><a href="">Planning</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+    <div class="Mob--menuTwo">
+        <ul class="HeaderNavigationList">
+            <li><a href="">Places to Go</a></li>
+            <li><a href="">Things to Do</a></li>
+            <li><a href="">Plan your Visit</a></li>
+            <li><a href="">Be Inspired</a></li>
+            <li><a href="">Explore By Map</a></li>
+        </ul>
     </div>
 </div>

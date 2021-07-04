@@ -1,0 +1,77 @@
+.Footer{
+  background-color: $color-footer;
+  color: $color-white;
+  padding: 3rem 1rem;
+  @include bp(sm){
+    padding: 4rem 0px;
+  }
+
+  a{
+    position: relative;
+  }
+
+  .Footer__grid{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+    font-size: 14px;
+    line-height: 19px;
+    @include bp(lg){
+      grid-gap: 2rem;
+      grid-template-columns: repeat(4,1fr);
+    }
+  }
+
+  .Box--one{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .Title{
+      padding-bottom: 1.5rem;
+    }
+
+    a{
+      padding-top: 1.5rem;
+      display: inline-block;
+    }
+  }
+
+  .Box--two{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    a{
+      display: inline-block;
+    }
+    .email{
+      margin-bottom: 1.5rem;
+    }
+    .Privacy{
+      margin-top: 1.5rem;
+    }
+  }
+
+  .Box--three, .Box--four{
+    display: grid;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: self-start;
+    @include bp(lg){
+      justify-content: center;
+    }
+    img{
+      align-self: end;
+      margin: 0px auto;
+      &:nth-child(2){
+        padding-top: 1rem;
+      }
+    }
+      }
+
+}
+
+.Block{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

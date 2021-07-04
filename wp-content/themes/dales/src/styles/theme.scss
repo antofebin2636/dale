@@ -21,3 +21,15 @@
 @import "./components/header";
 @import "./components/banner";
 @import "./components/txtBox";
+@import "./components/ctaBox";
+@import "./components/carousel";
+@import "./components/boxContent";
+@import "./components/footer";
+
+/* ----------------------------------------------------------------------
+| Vendors
+|------------------------------------------------------------------------
+| CSS required by external modules
+*/
+
+@import "~@glidejs/glide/src/assets/sass/glide.core";

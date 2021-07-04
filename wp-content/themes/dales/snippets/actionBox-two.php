@@ -6,22 +6,22 @@
                     <img src="<?php echo get_template_directory_uri()?>/images/Footprint-lft.svg" alt="">
                 </div>
                 <div class="CtaBox__primary CtaBox__items">
-                    <span class="Title" data-title >What's on easter 2019</span>
+                    <span class="Title" data-title >things to do</span>
                     <ul class="CtaBox__list" >
-                        <li><a href="">Easter Walk Route</a></li>
-                        <li><a href="">Lambing at Gill Grath Farm</a></li>
-                        <li><a href="">Wild About Dormice</a></li>
-                        <li><a href="">Easter Coffe Mornings</a></li>
-                        <li><a href="">The White Rabiit Trail</a></li>
+                        <li><a href="">Events</a></li>
+                        <li><a href="">Walking</a></li>
+                        <li><a href="">Cycling</a></li>
+                        <li><a href="">Stargazing</a></li>
+                        <li><a href="">Activites for children</a></li>
                     </ul>
-                    <a href="" class="CtaBox__cta Hover--trans">view easter activites</a>
+                    <a href="" class="CtaBox__cta Hover--trans">Find things to do</a>
                 </div>
                 <div class="CtaBox__secondary CtaBox__items">
                         <div class="CtaImg">
-                            <img src="<?php echo get_template_directory_uri()?>/images/ctaImg.png" alt="">
+                            <img src="<?php echo get_template_directory_uri()?>/images/children.png" alt="">
                         </div>
                     <a href="" class="CtaSecondary__cta Hover--trans">view Activity</a>
-                    <div class="FootPrint FootPrint--rght">
+                    <div class="FootPrint FootPrint--rght--top">
                         <img src="<?php echo get_template_directory_uri()?>/images/Footprint-rght.svg" alt="">
                     </div>
                 </div>
