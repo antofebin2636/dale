@@ -1,7 +1,7 @@
-<footer class="Footer">
+<footer class="Footer CtaBox__items" >
     <div class="Outer">
         <div class="Footer__grid">
-            <div class="Box--one">
+            <div class="Box--one" data-up>
 
                 <span class="Title">Yorkshire Dales National Park</span>
                 <p>Yoredale,</br>
@@ -13,7 +13,7 @@
                 </div>
 
             </div>
-            <div class="Box--two">
+            <div class="Box--two" data-up>
                 <div class="Contact--Foo">
                 <a href="tel:03004560030" class="footer-contact tele UnderScore">0300 456 0030</a>
                 <a href="mailto:info@yorkshiredales.org.uk" class="footer-contact email UnderScore">info@yorkshiredales.org.uk</a>
@@ -28,12 +28,12 @@
                 </div>
             </div>
             
-            <div class="Box--three">
+            <div class="Box--three" data-up>
                 <img src="<?php echo get_template_directory_uri()?>/images/footer-one.png" alt="">
                 <img src="<?php echo get_template_directory_uri()?>/images/national-park.png" alt="">
             </div>
 
-            <div class="Box--four">
+            <div class="Box--four" data-up>
                 <img src="<?php echo get_template_directory_uri()?>/images/viewranger.png" alt="">
                 <img src="<?php echo get_template_directory_uri()?>/images/investors.png" alt="">
             </div>

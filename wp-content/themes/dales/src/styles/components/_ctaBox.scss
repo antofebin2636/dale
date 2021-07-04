@@ -1,213 +1,202 @@
-.CtaBox{
-  background-color: $color-purple;
-  padding: 2rem 0;
-  @include bp(sm){
-    padding: 4rem 0;
-  }
+.CtaBox {
+    background-color: $color-purple;
+    padding: 2rem 0;
+    @include bp(sm) {
+        padding: 4rem 0;
+    }
+    //.CtaBox__items{
+    //  grid-column: span 5;
+    //  @include bp(sm){
+    //    grid-column: span 6;
+    //  }
+    //}
+    .CtaBox__primary {
+        grid-column: span 5;
+        position: relative;
+        z-index: 2;
+        @include bp(sm) {
+            grid-column: 2 / span 5;
+        }
+    }
+    .CtaBox__secondary {
+        grid-column: span 5;
+        @include bp(sm) {
+            grid-column: 7 / span 6;
+        }
+    }
+    .CtaBox__primary {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+        justify-content: center;
+        align-items: flex-start;
+        @include bp(lg) {
+            padding-right: 2rem;
+            //padding-left: 5rem;
+        }
+    }
+    .Title {
+        display: block;
+        color: $color-navItem;
+        padding-bottom: 1.5rem;
+        text-transform: uppercase;
+        font-weight: normal;
+        letter-spacing: 1px;
+        @include bp(sm) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}
 
-  //.CtaBox__items{
-  //  grid-column: span 5;
-  //  @include bp(sm){
-  //    grid-column: span 6;
-  //  }
-  //}
+.CtaBox__list {
+    a {
+        position: relative;
+        font-weight: $font-normal;
+        font-size: 20px;
+        line-height: 25px;
+        @include bp(lg) {
+            font-size: 25px;
+            line-height: 35px;
+        }
+        &:after {
+            position: absolute;
+            bottom: -0.1rem;
+            left: 0;
+            width: 100%;
+            border-bottom: 2px solid $color-action;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+            content: "";
+        }
+        &:hover,
+        &:focus {
+            &:after {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+            &:before {
+                opacity: 1;
+            }
+        }
+        &:before {
+            content: "";
+            background-image: url("../images/arrow.png");
+            width: 50px;
+            height: 31px;
+            margin-right: 16px;
+            left: -40px;
+            position: absolute;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            top: 8px;
+            display: inline-block;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+    }
+    >*+* {
+        padding-top: 0.5rem;
+    }
+}
 
-
-  .CtaBox__primary{
-    grid-column: span 5;
+.CtaImg {
     position: relative;
-    z-index: 2;
-    @include bp(sm){
-      grid-column: 2/span 5;
-    }
-  }
-
-  .CtaBox__secondary{
-    grid-column: span 5;
-    @include bp(sm){
-      grid-column: 7/span 6;
-    }
-  }
-
-  .CtaBox__primary{
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
-    padding-left: 2rem;
-    justify-content: center;
-    align-items: flex-start;
-    @include bp(lg){
-      padding-right: 2rem;
-      //padding-left: 5rem;
-    }
-  }
-
-  .Title{
-    display: block;
-    color: $color-navItem;
-    padding-bottom: 1.5rem;
-    text-transform: uppercase;
-    font-weight: normal;
-    letter-spacing: 1px;
-    @include bp(sm){
-      font-size: 16px;
-      line-height: 20px;
-    }
-  }
-}
-
-.CtaBox__list{
-  a{
-    position: relative;
-    font-weight: $font-normal;
-    font-size: 20px;
-    line-height: 25px;
-    @include bp(lg){
-      font-size: 25px;
-      line-height: 35px;
-    }
-    &:after{
-      position: absolute;
-      bottom: -0.1rem;
-      left: 0;
-      width: 100%;
-      border-bottom: 2px solid $color-action;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
-      content: "";
-    }
-    &:hover, &:focus{
-      &:after{
-        transform: scaleX(1);
-        transform-origin: left;
-      }
-      &:before{
-        opacity: 1;
-      }
-    }
-    &:before{
-      content: '';
-      background-image: url("../images/arrow.png");
-      width: 50px;
-      height: 31px;
-      margin-right: 16px;
-      left: -40px;
-      position: absolute;
-      background-size: 50%;
-      background-repeat: no-repeat;
-      top: 8px;
-      display: inline-block;
-      opacity: 0;
-      transition: opacity 0.4s;
-    }
-  }
-  > *+*{
-    padding-top: 0.5rem;
-  }
-}
-
-.CtaImg{
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  min-height: 19rem;
-  height: 100%;
-  @include bp(lg){
-    height: 430px;
-  }
-
-  img{
-    position: absolute;
-    inset: 0;
-    object-fit: cover;
+    min-height: 19rem;
     height: 100%;
-    width: 100%;
-  }
+    transform-origin: right;
+    @include bp(lg) {
+        height: 430px;
+    }
+    img {
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
 }
 
-.CtaBox__cta{
-  background-color: $color-action-secondary;
-  margin-top: 2rem;
-  text-transform: uppercase;
-  padding: 0.6rem 1.8rem;
-  overflow: hidden;
-  z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  line-height: 19px;
-  position: relative;
-
-}
-
-
-.CtaBox__secondary{
-  position: relative;
-  .CtaSecondary__cta{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    text-transform: uppercase;
-    padding: 0.7rem 1.5rem;
+.CtaBox__cta {
     background-color: $color-action-secondary;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    padding: 0.6rem 1.8rem;
+    overflow: hidden;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 15px;
     line-height: 19px;
-  }
+    position: relative;
 }
 
-.Hover--trans{
-  position: relative;
-  z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  &:after{
-    position: absolute;
-    top: -2px;
-    left: -23%;
-    z-index: -1;
-    width: calc(123% + 1rem);
-    height: calc(100% + 4px);
-    background-color: $color-action;
-    transform: skewX(-30deg) scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s;
-    content: "";
-  }
-  &:hover{
-    &:after{
-      transform: skewX(-30deg) scaleX(1);
+.CtaBox__secondary {
+    position: relative;
+    .CtaSecondary__cta {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        text-transform: uppercase;
+        padding: 0.7rem 1.5rem;
+        background-color: $color-action-secondary;
+        font-size: 15px;
+        line-height: 19px;
     }
-    text-decoration: none;
-  }
 }
 
-
-.FootPrint{
-  position: absolute;
-
-  &.FootPrint--lft{
-    grid-column: 1;
-    left: 0px;
-    bottom: 62%;
+.Hover--trans {
+    position: relative;
     z-index: 1;
-    @include bp(sm){
-      bottom: 25%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    &:after {
+        position: absolute;
+        top: -2px;
+        left: -23%;
+        z-index: -1;
+        width: calc(123% + 1rem);
+        height: calc(100% + 4px);
+        background-color: $color-action;
+        transform: skewX(-30deg) scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s;
+        content: "";
     }
-  }
-
-  &.FootPrint--rght{
-    bottom: -20px;
-    left: 10%;
-    @include bp(sm){
-      bottom: -69px;
+    &:hover {
+        &:after {
+            transform: skewX(-30deg) scaleX(1);
+        }
+        text-decoration: none;
     }
-  }
-  &.FootPrint--rght--top{
-    top: -34px;
-    right: 10%;
-  }
+}
 
+.FootPrint {
+    position: absolute;
+    &.FootPrint--lft {
+        grid-column: 1;
+        left: 0px;
+        bottom: 62%;
+        z-index: 1;
+        @include bp(sm) {
+            bottom: 25%;
+        }
+    }
+    &.FootPrint--rght {
+        bottom: -20px;
+        left: 10%;
+        @include bp(sm) {
+            bottom: -69px;
+        }
+    }
+    &.FootPrint--rght--top {
+        top: -34px;
+        right: 10%;
+    }
 }

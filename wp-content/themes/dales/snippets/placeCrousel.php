@@ -1,11 +1,11 @@
-<section class="PlaceCarousel">
+<section class="PlaceCarousel CtaBox__items">
     <div class="Section__inner">
         <div class="Outer">
             <div class="Section__header">
-                <h3 class="Title">Places to go</h3>
+                <h3 class="Title" data-title>Places to go</h3>
             </div>
             <div class="Section__body">
-                <div class="PlaceCarousel__wrapper" data-module="place-carousel">
+                <div class="PlaceCarousel__wrapper" data-module="place-carousel" data-up>
                     <div class="glide" data-carousel>
                         <div class="glide__track" data-glide-el="track">
                             <div class="glide__slides">

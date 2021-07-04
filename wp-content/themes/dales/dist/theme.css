@@ -7012,6 +7012,7 @@ main {
   display: flex;
   min-height: 19rem;
   height: 100%;
+  transform-origin: right;
 }
 @media (min-width: 1200px) {
   .CtaImg {
