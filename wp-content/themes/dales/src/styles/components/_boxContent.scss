@@ -1,166 +1,167 @@
-.BoxContent{
-  padding: 3rem 0px;
-  @include bp(lg){
-    padding: 5rem 0;
-  }
+.BoxContent {
+    padding: 3rem 0px;
+    @include bp(lg) {
+        padding: 5rem 0;
+    }
 }
 
-.BoxContent__header{
+.BoxContent__header {
     text-align: center;
-  padding-bottom: 3rem;
-  .Title{
-    display: block;
-    font-size: 28px;
-    line-height: 32px;
-    padding-bottom: 0.8rem;
-    @include bp(sm){
-      font-size: 35px;
-      line-height: 42px;
-    }
-  }
-  .SubTitle{
-    font-size: 16px;
-    line-height: 22px;
-    display: block;
-    margin: 0px auto;
-    @include bp(sm){
-      font-size: 18px;
-      line-height: 26px;
-      max-width: 25rem;
-    }
-  }
-}
-
-.BoxContent__columns{
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  .BoxContent__box{
-    @include bp(sm){
-      width: 48%;
-    }
-    @include bp(lg){
-      width: 30%;
-    }
-  }
-}
-
-.BoxContent__box{
-  .Box__header{
-    background-color: rgba(0, 61, 42,0.7);
-    padding: 1.2rem 0.8rem;
-    color: $color-white;
-    display: flex;
-    align-items: center;
-    .Icon{
-      width: 22%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-      @include bp(sm){
-        width: 30%;
-      }
-    }
-    .Title{
-      font-size: 16px;
-      line-height: 20px;
-      font-weight: $font-normal;
-    }
-  }
-  .Box__body{
-    background-color: $color-lGreen;
-    padding: 1.2rem 1.8rem;
-    font-size: 14px;
-    line-height: 22px;
-    .Date{
-      padding-bottom: 0.5rem;
-      display: block;
-    }
-    .Box__cta{
-      text-transform: uppercase;
-      font-size: 15px;
-      padding-top: 0.5rem;
-      position: relative;
-      &:before{
-        content: '';
-        background-image: url("../images/arrow.png");
-        width: 50px;
-        height: 31px;
-        margin-right: 16px;
-        right: -60px;
-        position: absolute;
-        background-size: 50%;
-        background-repeat: no-repeat;
-        top: 6px;
-        display: inline-block;
-        opacity: 0;
-        transition: opacity 0.4s, right 0.4s;
-      }
-      &:hover{
-        &:before{
-          opacity: 1;
-          right: -70px;
+    padding-bottom: 3rem;
+    .Title {
+        display: block;
+        font-size: 28px;
+        line-height: 32px;
+        padding-bottom: 0.8rem;
+        @include bp(sm) {
+            font-size: 35px;
+            line-height: 42px;
         }
-      }
     }
-  }
-}
-
-.Common--cta{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 2.5rem;
-  a{
-    padding: 0.8rem 2rem;
-    text-transform: uppercase;
-    overflow: hidden;
-    background-color: $color-action-secondary;
-  }
-
-}
-
-.Box--pad{
-  padding-top: 4rem;
-  .SubTitle {
-    @include bp(sm) {
-      max-width: 38rem;
+    .SubTitle {
+        font-size: 16px;
+        line-height: 22px;
+        display: block;
+        margin: 0px auto;
+        @include bp(sm) {
+            font-size: 18px;
+            line-height: 26px;
+            max-width: 25rem;
+        }
     }
-  }
 }
 
-.BoxContent__grid{
-  .Box--grid{
+.BoxContent__columns {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
     align-items: center;
-    color: $color-white;
-    background-color: $color-cogreen;
-    padding: 4rem 1rem;
-    font-size: 22px;
-    line-height: 30px;
-    text-align: center;
-    grid-column: span 6;
-    .Title{
-      display: block;
-      padding-top: 0.8rem;
+    justify-content: center;
+    .BoxContent__box {
+        @include bp(sm) {
+            width: 48%;
+        }
+        @include bp(lg) {
+            width: 30%;
+        }
     }
+}
 
-    @include bp(lg){
-      grid-column: span 3;
+.BoxContent__box {
+    .Box__header {
+        background-color: rgba(0, 61, 42, 0.7);
+        padding: 1.2rem 0.8rem;
+        color: $color-white;
+        display: flex;
+        align-items: center;
+        .Icon {
+            width: 22%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            @include bp(sm) {
+                width: 30%;
+            }
+        }
+        .Title {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: $font-normal;
+        }
     }
-    &:nth-child(1){
-      background-color: $color-darkGreen;
+    .Box__body {
+        background-color: $color-lGreen;
+        padding: 1.2rem 1.8rem;
+        font-size: 14px;
+        line-height: 22px;
+        .Date {
+            padding-bottom: 0.5rem;
+            display: block;
+        }
+        .Box__cta {
+            text-transform: uppercase;
+            font-size: 15px;
+            padding-top: 0.5rem;
+            position: relative;
+            &:before {
+                content: "";
+                background-image: url("../images/arrow.png");
+                width: 50px;
+                height: 31px;
+                margin-right: 16px;
+                right: -60px;
+                position: absolute;
+                background-size: 50%;
+                background-repeat: no-repeat;
+                top: 6px;
+                display: inline-block;
+                opacity: 0;
+                transition: opacity 0.4s, right 0.4s;
+            }
+            &:hover {
+                &:before {
+                    opacity: 1;
+                    right: -70px;
+                }
+            }
+        }
     }
-    &:nth-child(2){
-      background-color: $color-purples;
+}
+
+.Common--cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2.5rem;
+    a {
+        padding: 0.8rem 2rem;
+        text-transform: uppercase;
+        overflow: hidden;
+        background-color: $color-action-secondary;
     }
-    &:nth-child(3){
-      background-color: $color-voil;
+}
+
+.Box--pad {
+    padding-top: 4rem;
+    .SubTitle {
+        @include bp(sm) {
+            max-width: 38rem;
+        }
     }
-  }
+}
+
+.BoxContent__grid {
+    .Box--grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $color-white;
+        background-color: $color-cogreen;
+        padding: 4rem 1rem;
+        font-size: 22px;
+        line-height: 30px;
+        text-align: center;
+        grid-column: span 4;
+        .Title {
+            display: block;
+            padding-top: 0.8rem;
+        }
+        @include bp(sm) {
+            grid-column: span 6;
+        }
+        @include bp(lg) {
+            grid-column: span 3;
+        }
+        &:nth-child(1) {
+            background-color: $color-darkGreen;
+        }
+        &:nth-child(2) {
+            background-color: $color-purples;
+        }
+        &:nth-child(3) {
+            background-color: $color-voil;
+        }
+    }
 }

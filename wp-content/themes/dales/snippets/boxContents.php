@@ -58,8 +58,8 @@
                     </div>
                 </div>
 
-                <div class="Common--cta CtaBox__items" data-up>
-                    <a href="" class="Hover--trans">Plan your visit</a>
+                <div class="Common--cta CtaBox__items" >
+                    <a href="" class="Hover--trans" data-up>Plan your visit</a>
                 </div>
             </div>
 

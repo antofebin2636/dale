@@ -16,8 +16,8 @@
                     </ul>
                     <a href="" class="CtaBox__cta Hover--trans" data-up>>view easter activites</a>
                 </div>
-                <div class="CtaBox__secondary" >
-                        <div class="CtaImg" data-Img>
+                <div class="CtaBox__secondary" data-Img >
+                        <div class="CtaImg" >
                             <img src="<?php echo get_template_directory_uri()?>/images/ctaImg.png" alt="">
                         </div>
                     <a href="" class="CtaSecondary__cta Hover--trans">view Activity</a>

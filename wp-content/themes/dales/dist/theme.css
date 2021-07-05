@@ -6685,9 +6685,12 @@ main {
   color: #ffffff;
   z-index: 3;
 }
-.Mob__menu .Mob--menuOne, .Mob__menu .Mob--menuTwo {
+.Mob__menu .Mob--menuOne,
+.Mob__menu .Mob--menuTwo {
   padding: 3rem 3rem;
   flex: 1;
+  display: flex;
+  align-items: center;
 }
 .Mob__menu .Mob--menuOne {
   background-color: #003d2a;
@@ -7362,11 +7365,16 @@ main {
   font-size: 22px;
   line-height: 30px;
   text-align: center;
-  grid-column: span 6;
+  grid-column: span 4;
 }
 .BoxContent__grid .Box--grid .Title {
   display: block;
   padding-top: 0.8rem;
+}
+@media (min-width: 768px) {
+  .BoxContent__grid .Box--grid {
+    grid-column: span 6;
+  }
 }
 @media (min-width: 1200px) {
   .BoxContent__grid .Box--grid {
